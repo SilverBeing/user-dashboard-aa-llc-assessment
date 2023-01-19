@@ -344,6 +344,9 @@ footer {
   .display {
     display: flex;
   }
+  .content__container {
+    width: clamp(320px, 100%, 800px);
+  }
   .nav__menu {
     margin: 0;
   }
@@ -369,7 +372,7 @@ footer {
   }
   .userProfile__userSummary,
   .content__container {
-    justify-content: center;
+    justify-content: center !important;
   }
 
   .userSummary__details_profile-info {
@@ -389,5 +392,6 @@ footer {
   }
   .category__button button {
     padding: 3px 3px;
+    font-size: clamp(0.5em, 0.9em, 1.5em);
   }
 }
