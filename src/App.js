@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Footer from "./Components/Footer";
+import Navbar from "./Components/Navbar";
+import UserContents from "./Components/UserContents";
+import UserProfile from "./Components/UserProfile";
+import useUser from "./Hooks/userHook";
 
 function App() {
+  const [user] = useUser();
+  // the user state from the context created
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <Navbar />
       </header>
-    </div>
+      <main className="App">
+        <UserProfile />
+        {/* when we don't have a user the userContent component would not be rendered */}
+        {user ? <UserContents /> : ""}
+      </main>
+      <Footer />
+    </>
   );
 }
 
