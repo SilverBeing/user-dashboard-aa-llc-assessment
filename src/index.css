@@ -321,7 +321,7 @@ footer {
     gap: clamp(3px, 5px, 10px);
   }
 }
-@media only screen and (min-width: 350px) and (max-width: 800px) {
+@media only screen and (min-width: 320px) and (max-width: 800px) {
   .nav__mobile-menu {
     position: absolute;
     top: 4em;
