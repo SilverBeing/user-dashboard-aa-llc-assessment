@@ -322,6 +322,10 @@ footer {
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 800px) {
+  main,
+  header {
+    max-width: 95%;
+  }
   .nav__mobile-menu {
     position: absolute;
     top: 4em;
@@ -367,11 +371,9 @@ footer {
   .content__container {
     justify-content: center;
   }
-  .additionalDetails,
-  .user__images {
-  }
+
   .userSummary__details_profile-info {
-    width: clamp(350px, 100%, 500px);
+    width: clamp(320px, 100%, 500px);
   }
   .userSummary__details_profile-image {
     left: 50%;
