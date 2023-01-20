@@ -370,7 +370,7 @@ footer span {
 }
 
 /* Media Queries for 800px to 1200px */
-@media only screen and (min-width: 800px) and (max-width: 1200px) {
+@media only screen and (min-width: 730px) and (max-width: 1200px) {
   main,
   nav {
     max-width: 95%;
@@ -383,7 +383,7 @@ footer span {
   }
 }
 /* Media Queries for breakpoint 320px to 800px */
-@media only screen and (min-width: 320px) and (max-width: 800px) {
+@media only screen and (min-width: 320px) and (max-width: 720px) {
   main,
   nav {
     max-width: 95%;
