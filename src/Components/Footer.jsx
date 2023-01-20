@@ -5,10 +5,10 @@ const Footer = () => {
   return (
     <footer>
       <p>
-        Made with love
+        Coded by
         <span>
           <BiGhost />
-        </span>{" "}
+        </span>
         Silver Idahosa
       </p>
     </footer>

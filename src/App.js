@@ -14,7 +14,8 @@ function App() {
       </header>
       <main className="App">
         <UserProfile />
-        {/* when we don't have a user the userContent component would not be rendered */}
+        {/* when we don't have a user & there is an error 
+        the userContent component would not be rendered */}
         {user ? <UserContents /> : ""}
       </main>
       <Footer />

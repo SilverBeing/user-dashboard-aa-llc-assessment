@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { dummyData } from "../Data";
-import UserImages from "./UserImages";
+import UserUploads from "./UserUploads";
 
 const UserContents = () => {
   const [filteredCategory, setFilteredCategory] = useState(false);
@@ -63,7 +63,7 @@ const UserContents = () => {
           ))}
         </div>
       </div>
-      <UserImages />
+      <UserUploads />
     </div>
   );
 };

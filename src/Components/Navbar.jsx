@@ -3,9 +3,11 @@ import { BiGhost, BiSearch, BiNotification, BiPlus } from "react-icons/bi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { GrClose } from "react-icons/gr";
 const Navbar = () => {
+  // The clicked state stores data of when the user clicks the icon
   const [clicked, setClicked] = useState(false);
 
   const handleMobileNavbar = () => {
+    // This toggles the mobile navbar by changing the display .
     setClicked((current) => !current);
   };
   return (
@@ -50,9 +52,9 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-
       <div className="nav__toggle">
         <button onClick={handleMobileNavbar}>
+          {/* When the button is clicked the navbar icon changes */}
           {clicked ? <GrClose /> : <RxHamburgerMenu />}
         </button>
       </div>

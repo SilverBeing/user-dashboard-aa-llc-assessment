@@ -14,7 +14,7 @@ const AdditionalDetails = () => {
   const [user] = useUser();
   return (
     <div className="additionalDetails">
-      <div className="additionalDetails__heading">
+      <div className="heading">
         <h2>Additional Details</h2>
         <HiOutlinePencilAlt />
       </div>

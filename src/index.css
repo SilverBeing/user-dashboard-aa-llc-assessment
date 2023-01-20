@@ -29,6 +29,7 @@ body {
   min-height: 100vh;
   background-color: #fff;
 }
+/* Loading and Error Component Styling */
 .loader h1 {
   font-size: 1.5em;
   color: var(--dark-grey);
@@ -43,7 +44,7 @@ body {
   min-height: 70vh;
   z-index: 100000000;
 }
-
+/* Navbar Styling */
 header {
   margin-bottom: 64px !important;
   max-width: 85%;
@@ -108,6 +109,17 @@ nav {
   margin: 0 10px;
   font-size: 1.5em;
 }
+.nav__toggle {
+  display: none;
+}
+.nav__toggle button {
+  background: none !important;
+  border: none;
+  outline: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+/* Userprofile Component Styling */
 .userProfile,
 .userContent__container {
   display: flex;
@@ -180,15 +192,24 @@ nav {
   width: max-content;
   border-radius: 4px;
 }
+.userSummary__details_profile-location h3 span {
+  padding-right: 7px;
+}
 .userSummary__details_profile-name h2 {
   color: var(--black);
   font-size: 2em;
-  /* width: max-content; */
 }
 .userSummary__details_profile-name p {
   font-size: 0.9em;
   color: var(--dark-grey);
+  display: flex;
+  align-items: center;
 }
+.userSummary__details_profile-name p span {
+  padding-right: 7px;
+  color: var(--black);
+}
+
 .userSummary__details_edit-button button {
   padding: 10px;
   background-color: var(--purple);
@@ -200,6 +221,7 @@ nav {
 .userSummary__details_profile-bio {
   font-size: 0.9em;
   color: var(--dark-grey);
+  margin: 10px 0;
 }
 .userSummary__details_profile-socials {
   display: flex;
@@ -208,12 +230,12 @@ nav {
   margin-top: 20px;
   font-size: 1.5em;
 }
+/* AdditionalDetails Component Styling */
 .additionalDetails,
 .user__images {
   flex-basis: 30%;
   flex-grow: 1;
   padding: 20px;
-
   border-radius: 8px;
   box-shadow: var(--shadow);
 }
@@ -231,32 +253,27 @@ nav {
   color: var(--dark-grey);
   font-size: 0.9em;
 }
-.additionalDetails__heading {
+.heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.heading svg {
+  font-size: 1.5em;
+}
+.heading h2 {
+  color: var(--purple);
+  font-weight: 700;
+  font-size: 1.3em;
 }
 .additionalDetails__detail {
   display: flex;
   gap: 15px;
   align-items: center;
-  margin: 15px 0;
+  margin: 24px 0;
 }
-.additionalDetails__heading h2,
-.user__images h2 {
-  color: var(--purple);
-  font-weight: 700;
-}
-.nav__toggle {
-  display: none;
-}
-.nav__toggle button {
-  background: none !important;
-  border: none;
-  outline: none;
-  font-size: 2em;
-  cursor: pointer;
-}
+
+/* UserContents Component Styling */
 .categories__buttons {
   display: flex;
   gap: 20px;
@@ -266,7 +283,6 @@ nav {
   box-shadow: var(--shadow);
   border-radius: 8px;
   background-color: var(--white);
-  overflow-x: scroll;
 }
 .category__button button {
   padding: 10px 16px;
@@ -308,11 +324,12 @@ nav {
   color: var(--purple);
   font-size: 0.6em;
 }
+/* Footer Component Styling */
 footer {
   background-color: var(--black);
   text-align: center;
   color: var(--white);
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 500;
   height: 30vh;
   display: flex;
@@ -320,13 +337,15 @@ footer {
   justify-content: center;
   margin-top: 64px;
 }
+footer span {
+  color: var(--purple);
+}
+
+/* Media Queries for 800px to 1200px */
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
   main,
   header {
     max-width: 95%;
-  }
-  .nav__mobile-menu {
-    gap: 0;
   }
   .nav__Icons {
     display: none;
@@ -335,6 +354,7 @@ footer {
     gap: clamp(3px, 5px, 10px);
   }
 }
+/* Media Queries for breakpoint 320px to 800px */
 @media only screen and (min-width: 320px) and (max-width: 800px) {
   main,
   header {
@@ -372,8 +392,7 @@ footer {
   .nav__Icons {
     align-items: center;
     margin: 0;
-
-    justify-content: flex-start;
+    gap: 5px;
   }
   .nav__toggle {
     display: block;
@@ -384,11 +403,6 @@ footer {
     text-align: center;
     margin: 0;
   }
-  .userProfile__userSummary,
-  .content__container {
-    justify-content: center !important;
-  }
-
   .userSummary__details_profile-info {
     width: clamp(320px, 100%, 500px);
   }
@@ -398,14 +412,13 @@ footer {
   }
   .userSummary__details_edit-button button {
     margin-top: 15px;
-    width: 100%;
   }
   .categories__buttons {
-    gap: clamp(1px, 3px, 10px);
     padding: 0;
+    overflow-x: scroll;
   }
   .category__button button {
     padding: 3px 3px;
-    font-size: clamp(0.5em, 0.9em, 1.5em);
+    font-size: clamp(0.9em, 1em, 1.5em);
   }
 }

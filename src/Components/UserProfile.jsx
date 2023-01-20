@@ -7,6 +7,8 @@ import {
   SiFacebook,
   SiSlack,
 } from "react-icons/si";
+import { HiLocationMarker } from "react-icons/hi";
+import { BsGenderMale, BsGenderFemale } from "react-icons/bs";
 import Loader from "./Loader";
 import AdditionalDetails from "./AdditionalDetails";
 import userHeader from "../Assets/userHeader.jpg";
@@ -35,16 +37,30 @@ const UserProfile = () => {
                     <div className="userSummary__details_profile-image">
                       <img
                         src={user.picture.large}
-                        alt={user.picture.thumbnail}
+                        alt={`${user.name.first} profile avatar`}
                       />
                     </div>
                     <div className="userSummary__details_profile-info">
                       <div className="userSummary__details_profile-name">
-                        <h2>{`${user.name.title} ${user.name.first} ${user.name.last}`}</h2>
-                        <p>{user.gender}</p>
+                        <h2>{`${user.name.title}, ${user.name.first} ${user.name.last}`}</h2>
+                        <p>
+                          <span>
+                            {user.gender === "male" ? (
+                              <BsGenderMale />
+                            ) : (
+                              <BsGenderFemale />
+                            )}
+                          </span>
+                          {user.gender}
+                        </p>
                       </div>
                       <div className="userSummary__details_profile-location">
-                        <h3>{`${user.location.city} ${user.location.state} ${user.location.country}`}</h3>
+                        <h3>
+                          <span>
+                            <HiLocationMarker />
+                          </span>
+                          {`${user.location.city}, ${user.location.state}. ${user.location.country}`}
+                        </h3>
                       </div>
                       <div className="userSummary__details_profile-bio">
                         <p>

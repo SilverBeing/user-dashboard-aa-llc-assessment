@@ -1,26 +1,39 @@
+import { HiOutlineCamera } from "react-icons/hi";
 import useUser from "../Hooks/userHook";
-const UserImages = () => {
+const UserUploads = () => {
   // the user state from the context created
   const [user] = useUser();
 
   return (
     <div className="user__images">
-      <h2>Uploads</h2>
+      <div className="heading">
+        <h2>Uploads</h2>
+        <HiOutlineCamera />
+      </div>
+
       {user?.map((user) => (
         <>
           <div className="userImage">
-            <img src={user.picture.large} loading="lazy" alt="user Images" />
+            <img
+              src={user.picture.large}
+              loading="lazy"
+              alt={`${user.name.first} uploads`}
+            />
             <p>Uploaded 24 hours Ago</p>
           </div>
           <div className="userImage">
-            <img src={user.picture.medium} loading="lazy" alt="user Images" />
+            <img
+              src={user.picture.medium}
+              loading="lazy"
+              alt={`${user.name.first} uploads`}
+            />
             <p>Uploaded 2months Ago</p>
           </div>
           <div className="userImage">
             <img
               src={user.picture.thumbnail}
               loading="lazy"
-              alt="user Images"
+              alt={`${user.name.first} uploads`}
             />
             <p>Uploaded 5 years Ago</p>
           </div>
@@ -30,4 +43,4 @@ const UserImages = () => {
   );
 };
 
-export default UserImages;
+export default UserUploads;
