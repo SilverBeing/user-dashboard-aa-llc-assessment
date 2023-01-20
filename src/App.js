@@ -20,6 +20,7 @@ function App() {
       </main>
       <Footer />
     </>
+    // I am open to corrections. Thank you!
   );
 }
 

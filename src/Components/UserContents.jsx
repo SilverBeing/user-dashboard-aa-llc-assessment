@@ -3,14 +3,18 @@ import { dummyData } from "../Data";
 import UserUploads from "./UserUploads";
 
 const UserContents = () => {
+  // filtered category is the active state of whatever category that is clicked
   const [filteredCategory, setFilteredCategory] = useState(false);
+  // content stores the dummy data imported
   const [content, setContent] = useState(dummyData);
+
   const [categories, setCategories] = useState(
     dummyData?.filter((category) => {
       return category.category;
     })
     // This filters out the categories only from the dummy data
   );
+
   const filterByCategory = (category) => {
     const result = dummyData.filter((content) => {
       return content.category === category;
@@ -21,6 +25,7 @@ const UserContents = () => {
     // This monitors the category that is active
     setFilteredCategory(category);
   };
+
   // handleAll sets the content back to default when clicked showing all the contents and it set the filtered category to false
   const handleAll = () => {
     setFilteredCategory(false);
@@ -63,6 +68,7 @@ const UserContents = () => {
           ))}
         </div>
       </div>
+      {/* The user images */}
       <UserUploads />
     </div>
   );

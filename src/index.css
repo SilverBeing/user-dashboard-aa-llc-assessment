@@ -15,7 +15,7 @@
 }
 main {
   max-width: 85%;
-  margin: auto;
+  margin: 64px auto;
   min-height: 80vh;
   display: flex;
   align-items: center;
@@ -47,15 +47,22 @@ body {
 /* Navbar Styling */
 header {
   margin-bottom: 64px !important;
-  max-width: 85%;
+  width: 100%;
   margin: auto;
+  background-color: #fff;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 5em;
-  width: 100%;
+  max-width: 85%;
+  margin: auto;
 }
 .nav__logo {
   font-size: 3.5em;
@@ -312,8 +319,8 @@ nav {
   color: var(--dark-grey);
 }
 .userContent::-webkit-scrollbar {
-  width: 3px;
-  background-color: var(--dark-grey);
+  width: 2px;
+  background-color: var(--light-grey);
 }
 .button--active {
   background-color: var(--purple) !important;
@@ -344,7 +351,7 @@ footer span {
 /* Media Queries for 800px to 1200px */
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
   main,
-  header {
+  nav {
     max-width: 95%;
   }
   .nav__Icons {
@@ -357,7 +364,7 @@ footer span {
 /* Media Queries for breakpoint 320px to 800px */
 @media only screen and (min-width: 320px) and (max-width: 800px) {
   main,
-  header {
+  nav {
     max-width: 95%;
   }
   .nav__mobile-menu {
