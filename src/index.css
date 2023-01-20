@@ -370,7 +370,7 @@ footer span {
 }
 
 /* Media Queries for 800px to 1200px */
-@media only screen and (min-width: 730px) and (max-width: 1200px) {
+@media only screen and (min-width: 720px) and (max-width: 1200px) {
   main,
   nav {
     max-width: 95%;
@@ -380,6 +380,9 @@ footer span {
   }
   .categories__buttons {
     gap: clamp(3px, 5px, 10px);
+  }
+  .nav__menu ul li a {
+    margin: 0 15px !important;
   }
 }
 /* Media Queries for breakpoint 320px to 800px */
@@ -417,9 +420,11 @@ footer span {
   }
   .nav__menu ul {
     flex-direction: column;
-    gap: 15px;
+
+    gap: 5px;
     margin: 20px 0;
   }
+
   .nav__Icons {
     align-items: center;
     margin: 0;
