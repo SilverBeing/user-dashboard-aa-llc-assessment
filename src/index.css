@@ -186,7 +186,7 @@ nav {
   /* width: max-content; */
 }
 .userSummary__details_profile-name p {
-  font-size: 12px;
+  font-size: 0.9em;
   color: var(--dark-grey);
 }
 .userSummary__details_edit-button button {
@@ -198,9 +198,8 @@ nav {
   border-radius: 4px;
 }
 .userSummary__details_profile-bio {
-  font-size: 0.8em;
+  font-size: 0.9em;
   color: var(--dark-grey);
-  font-weight: 600;
 }
 .userSummary__details_profile-socials {
   display: flex;
@@ -225,14 +224,14 @@ nav {
 .additionalDetails svg {
   font-size: 1.5em;
 }
-.additonalDetails h3 {
-  font-size: 0.7em;
+.additionalDetails h3 {
+  font-size: 1em;
 }
-.additonalDetails p {
+.additionalDetails p {
   color: var(--dark-grey);
-  font-size: 0.6em;
+  font-size: 0.9em;
 }
-.additonalDetails__heading {
+.additionalDetails__heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -294,6 +293,7 @@ nav {
 }
 .userContent p {
   font-size: 0.9em;
+  color: var(--dark-grey);
 }
 .userContent::-webkit-scrollbar {
   width: 3px;
