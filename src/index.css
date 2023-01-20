@@ -420,8 +420,7 @@ footer span {
   }
   .nav__menu ul {
     flex-direction: column;
-
-    gap: 5px;
+    gap: 10px;
     margin: 20px 0;
   }
 
