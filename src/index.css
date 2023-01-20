@@ -13,9 +13,27 @@
   --dark-grey: #a3a29f;
   --shadow: 0px 7px 15px 0 rgba(0, 0, 0, 0.1);
 }
+p {
+  text-align: justify;
+}
+svg {
+  cursor: pointer;
+}
+
+button,
+a {
+  transition: all 250ms ease-in;
+  cursor: pointer;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.9;
+  letter-spacing: 1.5px;
+}
 main {
   max-width: 85%;
-  margin: auto;
+  margin: 64px auto;
   min-height: 80vh;
   display: flex;
   align-items: center;
@@ -46,17 +64,24 @@ body {
 }
 /* Navbar Styling */
 header {
-  margin-bottom: 64px !important;
-  max-width: 85%;
+  width: 100%;
   margin: auto;
+  background-color: #fff;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 5em;
-  width: 100%;
+  max-width: 85%;
+  margin: auto;
 }
+
 .nav__logo {
   font-size: 3.5em;
   color: var(--black);
@@ -104,7 +129,9 @@ nav {
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
+
 .nav__Icons svg {
   margin: 0 10px;
   font-size: 1.5em;
@@ -198,6 +225,7 @@ nav {
 .userSummary__details_profile-name h2 {
   color: var(--black);
   font-size: 2em;
+  line-height: 1em;
 }
 .userSummary__details_profile-name p {
   font-size: 0.9em;
@@ -312,8 +340,8 @@ nav {
   color: var(--dark-grey);
 }
 .userContent::-webkit-scrollbar {
-  width: 3px;
-  background-color: var(--dark-grey);
+  width: 2px;
+  background-color: var(--light-grey);
 }
 .button--active {
   background-color: var(--purple) !important;
@@ -344,7 +372,7 @@ footer span {
 /* Media Queries for 800px to 1200px */
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
   main,
-  header {
+  nav {
     max-width: 95%;
   }
   .nav__Icons {
@@ -357,8 +385,11 @@ footer span {
 /* Media Queries for breakpoint 320px to 800px */
 @media only screen and (min-width: 320px) and (max-width: 800px) {
   main,
-  header {
+  nav {
     max-width: 95%;
+  }
+  .userSummary__details_profile-name h2 {
+    line-height: 1em;
   }
   .nav__mobile-menu {
     position: absolute;
