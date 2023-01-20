@@ -142,7 +142,7 @@ nav {
   border-radius: 8px;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .userSummary__details {
@@ -267,6 +267,7 @@ nav {
   box-shadow: var(--shadow);
   border-radius: 8px;
   background-color: var(--white);
+  overflow-x: scroll;
 }
 .category__button button {
   padding: 10px 16px;
