@@ -13,6 +13,24 @@
   --dark-grey: #a3a29f;
   --shadow: 0px 7px 15px 0 rgba(0, 0, 0, 0.1);
 }
+p {
+  text-align: justify;
+}
+svg {
+  cursor: pointer;
+}
+
+button,
+a {
+  transition: all 250ms ease-in;
+  cursor: pointer;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.9;
+  letter-spacing: 1.5px;
+}
 main {
   max-width: 85%;
   margin: 64px auto;
@@ -46,7 +64,6 @@ body {
 }
 /* Navbar Styling */
 header {
-  margin-bottom: 64px !important;
   width: 100%;
   margin: auto;
   background-color: #fff;
@@ -64,6 +81,7 @@ nav {
   max-width: 85%;
   margin: auto;
 }
+
 .nav__logo {
   font-size: 3.5em;
   color: var(--black);
@@ -111,7 +129,9 @@ nav {
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
+
 .nav__Icons svg {
   margin: 0 10px;
   font-size: 1.5em;
@@ -205,6 +225,7 @@ nav {
 .userSummary__details_profile-name h2 {
   color: var(--black);
   font-size: 2em;
+  line-height: 1em;
 }
 .userSummary__details_profile-name p {
   font-size: 0.9em;
@@ -366,6 +387,9 @@ footer span {
   main,
   nav {
     max-width: 95%;
+  }
+  .userSummary__details_profile-name h2 {
+    line-height: 1em;
   }
   .nav__mobile-menu {
     position: absolute;
